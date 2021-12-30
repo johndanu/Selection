@@ -1,0 +1,24 @@
+<div class="wrapper py-4">
+    <div class="d-block text-white p-3">
+        <h1 class=" text-center">Selection</h1>
+        <form [formGroup]="selection">
+            <small class="text-left">Priority bank</small>
+            <select formControlName="priorityBank" class="form-select " (ngModelChange)="selectPriority($event)"
+                aria-label="Default select example">
+                <option selected value="null">Select a bank to continue</option>
+                <option *ngFor="let bank of priorityBankList" [value]="bank">{{bank}}</option>
+            </select>
+            <small class="text-left">Secoundary bank</small>
+            <select formControlName="secoundaryBank" class="form-select" (ngModelChange)="selectSecoundary($event)"
+                aria-label=" Default select example">
+                <option selected value="null">Select a bank to continue</option>
+                <option *ngFor=" let bank of secoundaryBankList" [value]="bank">{{bank}}</option>
+            </select>
+            <small class="text-left">Final bank</small>
+            <select formControlName="finalBank" class="form-select " aria-label="Default select example">
+                <option selected value="null">Select a bank to continue</option>
+                <option *ngFor="let bank of finalBankList" [value]="bank">{{bank}}</option>
+            </select>
+        </form>
+    </div>
+</div>
