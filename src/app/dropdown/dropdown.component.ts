@@ -32,7 +32,6 @@ export class DropdownComponent implements OnInit {
   selectSecoundary(event: Event) {
     let value = this.selection.value.secoundaryBank
     this.selection.patchValue({ finalBank: null })
-
     this.finalBankList = this.secoundaryBankList.filter(function (item) {
       return item !== value
     })
